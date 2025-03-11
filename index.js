@@ -1,10 +1,3 @@
-// NORDLE PDF SERVER API
-// @autor: Andres Azcona
-// @date: 2025-02-22
-// @description: API para convertir PDF a imágenes y generar un nuevo PDF con alta resolución para evitar copias no autorizadas.
-// @version: 1.0
-// Status: LIVE
-
 require('dotenv').config(); // Carga las variables de entorno desde un archivo .env
 const express = require('express');
 const multer = require('multer'); // Middleware para manejar la subida de archivos
@@ -174,6 +167,6 @@ app.get('/time-remaining/:filename', (req, res) => {
 
 // Arrancar el servidor Express
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Servidor Express escuchando en puerto ${port}`);
-});
+const serverless = require('serverless-http');
+module.exports = serverless(app);
+
