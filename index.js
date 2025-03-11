@@ -167,6 +167,6 @@ app.get('/time-remaining/:filename', (req, res) => {
 
 // Arrancar el servidor Express
 const port = process.env.PORT || 3000;
-const serverless = require('serverless-http');
-module.exports = serverless(app);
-
+app.listen(port, () => {
+    console.log(`Servidor Express escuchando en el puerto ${port}`);
+});
