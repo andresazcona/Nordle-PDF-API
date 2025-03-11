@@ -1,2 +1,6 @@
 .env
 node_modules
+.vercel
+vercel.json
+nordleapimanager-firebase-adminsdk-fbsvc-72142007ec.json
+```
